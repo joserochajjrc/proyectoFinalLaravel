@@ -23,6 +23,8 @@ return new class extends Migration
             $table->integer('iva_producto');
             $table->integer('cant_maxima_producto');
             $table->integer('cant_minima_producto');
+            $table->unsignedBigInteger('id_marca');
+            $table->unsignedBigInteger('id_unidad_medida');
             $table->string('comentarios_producto');
             $table->foreign('id_marca')->references('id_marca')->on('marca');
             $table->foreign('id_unidad_medida')->references('id_unidad_medida')->on('unidad_medida');
