@@ -25,10 +25,13 @@ return new class extends Migration
             $table->integer('cant_minima_producto');
             $table->unsignedBigInteger('id_marca');
             $table->unsignedBigInteger('id_unidad_medida');
+            $table->unsignedBigInteger('id_detalle');
+            $table->unsignedBigInteger('id_presentacion');
             $table->string('comentarios_producto');
             $table->foreign('id_marca')->references('id_marca')->on('marca');
             $table->foreign('id_unidad_medida')->references('id_unidad_medida')->on('unidad_medida');
-            $table->foreign('id_presentacion')->references('id_presentacion')->on('presentacion');
+            $table->foreign('id_presentacion')->references('id_presentacion')->on('presentacions');
+            $table->foreign('id_detalle')->references('id_detalle')->on('detalles');
         });
     }
 
