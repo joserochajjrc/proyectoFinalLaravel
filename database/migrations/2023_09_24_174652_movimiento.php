@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('producto', function(Blueprint $table){
+        Schema::create('movimiento', function(Blueprint $table){
             $table->bigIncrements('id_movimiento');
             $table->string('tipo_movimiento');
             $table->string('numero_factura_movimiento');
