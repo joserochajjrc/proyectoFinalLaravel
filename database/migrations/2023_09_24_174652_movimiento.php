@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('fecha_movimiento', $precision = 0);
             $table->double('total_movimiento', 8, 2);
             $table->double('total_iva_movimiento', 8, 2);
-            $table->string('empresa)envio)movimiento');
+            $table->string('empresa_envio_movimiento');
             $table->foreign('id_persona')->references('id_persona')->on('persona');
         });
     }
